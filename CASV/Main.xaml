@@ -1,0 +1,461 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2128,5908" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="2138,5843" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Acessar ou Criar uma Conta | Official U.S. Department of State Visa Appointment " sap:VirtualizedContainerService.HintSize="2096,5753" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2084,5532" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="2042,23" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT user_email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="2042,225" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="usuario@servidor.com.br">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/users/sign_in" DesignTimeRectangle="405, 540, 510, 42" ElementType="InputBox" FriendlyName="'INPUT user_email'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='E-mail *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAgIAAAAuCAYAAABatHGoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFlSURBVHhe7dY7ioVAFEXRnv/QDJyGgR9MxECkmvtA4QXdA6izFuyoKr/npwEAsQwBAAj2DoF5nts4jm0YBkmS1Gl16+vmP94hUA/TNLVlWdq6rpIkqbPqxtetr5v/eIdArYR939txHO08T0mS1Fl14+vW181/fA2B+nBdV7vvW5IkdVbd+Lr1fw6BWgv1EQDoT934uvWGAAAEMgQAIJghAADBDAEACGYIAEAwQwAAghkCABDMEACAYIYAAAQzBAAgmCEAAMEMAQAIZggAQDBDAACCGQIAEMwQAIBghgAABDMEACCYIQAAwQwBAAhmCABAMEMAAIIZAgAQzBAAgGCGAAAEMwQAIJghAADBDAEACGYIAEAwQwAAghkCABDMEACAYIYAAAQzBAAgmCEAAMH+HQLjOLZt29p1XZ+PkiSpr+rG162vm/94h8A8z5+HWgmSJKnP6tbXzX+8QwAAyGMIAECs1n4BDE6uk0qf7XgAAAAASUVORK5CYII=" InformativeScreenshot="c598fd4668d6aa67ed0b09fd4ce5e7a0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Acessar ou Criar uma Conta | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Senha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="2042,225" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="senha@123456">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/users/sign_in" DesignTimeRectangle="405, 693, 510, 42" ElementType="InputBoxPassword" FriendlyName="'INPUT user_password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='Senha' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAgIAAAAuCAYAAABatHGoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFlSURBVHhe7dY7ioVAFEXRnv/QDJyGgR9MxECkmvtA4QXdA6izFuyoKr/npwEAsQwBAAj2DoF5nts4jm0YBkmS1Gl16+vmP94hUA/TNLVlWdq6rpIkqbPqxtetr5v/eIdArYR939txHO08T0mS1Fl14+vW181/fA2B+nBdV7vvW5IkdVbd+Lr1fw6BWgv1EQDoT934uvWGAAAEMgQAIJghAADBDAEACGYIAEAwQwAAghkCABDMEACAYIYAAAQzBAAgmCEAAMEMAQAIZggAQDBDAACCGQIAEMwQAIBghgAABDMEACCYIQAAwQwBAAhmCABAMEMAAIIZAgAQzBAAgGCGAAAEMwQAIJghAADBDAEACGYIAEAwQwAAghkCABDMEACAYIYAAAQzBAAg2L9DYBzHtm1bu67r81GSJPVV3fi69XXzH+8QmOf581ArQZIk9Vnd+rr5j3cIAAB5DAEACGYIAECs1n4BhMKwDTucT2QAAAAASUVORK5CYII=" InformativeScreenshot="d5497d67b0cee9bbfbd046d6a58a87aa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Acessar ou Criar uma Conta | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="405, 673, 510, 15" ElementType="Text" FriendlyName="'Senha'" FullSelectorArgument="&lt;webctrl aaname='Senha' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Senha' tag='LABEL' type='' check:text='Senha' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAgIAAAATCAYAAADiUGXbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHDSURBVHhe7dpBbuIwFAbguRPX4AxwEA7AnpuwZsuWK3AFliw9em1f5LymU6REajX5PsmKYjuQ3ftj+08DAFZLEACAFRMEAGDFBAEAWLFREHg+n+1wOLTNZjO0uI/+JZ1Op7cGAPysIQg8Ho+23+/b+Xz+6HkXBTv6Y3wpggAA/A5DELjdbpMFPwNCjC9FEACA32EUBLbbbbvf7x89X4s5MTe3D/qiHmO73a5dLpfRnD5IxPzj8TjahqjBIO5zLNqr7wYAvG4IAvV8wFdf7DUw5HM5P0NCf7Ygthv61YYs8hkO6rZEXPvn8z/6PgBgvtFhwRDFOcNAtv7cQBTxeo4gVwHimkGgXwHox0P8Ri3q0ZdhYkoNBwDAfJ+CQC+/xPPrvb+vLVcJatEPU0GgFv2pvhpKBAEAWNY/g0DI4h9Fui7hT1kiCMTv9+Ei+wQBAFjWWxDoi/2ULNLfzQtzg0D+Rw0bMSYIAMCyhhWBXIavBbgW8ZzXnwGIZ/IwYJ0fat8rQaAfzxUCQQAAljXaGsil/yi62frT/qnu3fdz5gaBUN8jAsD1eh1tFQAA8317RgAA+H8JAgCwYoIAAKyYIAAAq9XaXzlS25cLrkr8AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="2042,165" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/users/sign_in" DesignTimeRectangle="405, 465, 22, 22" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;label&amp;gt;div' parentid='new_user' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;label&amp;gt;div' parentid='new_user' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABhSURBVEhLY/hPJzDMLXr37t3/zZs3/589ezZFGGQGyCxkgGIRSMG1a9egPPIByAyQWcgAxSKQa6gF0M0atYhoMGoR2WDUIrLBqEVkg1GLyAZ4LaJbxUe3qpyWYLhZ9P8/ACneMS+qyY7bAAAAAElFTkSuQmCC" InformativeScreenshot="e23cf5dde9fb3ce8e0c71fdf856ba05b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Acessar ou Criar uma Conta | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="405, 464, 510, 23" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='  Eu li e entendi a  ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='  Eu li e entendi a  ' tag='LABEL' type='' check:text='unchecked' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Acessar'" sap:VirtualizedContainerService.HintSize="2042,165" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/users/sign_in" DesignTimeRectangle="405, 517, 103, 42" ElementType="Button" FriendlyName="'Acessar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Acessar' check:text='Acessar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAAAuCAYAAAAvKufTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVHhe7ZyxihNRFIZ9FpF9ANfSQrBTn8GncCtBxWpfQNBK0EJkGwt3C4stRLaw2GorBbGSYEBk2SlWkxz9Bk44ezNJCBpyD/Mf+EjunDvJ5P/una12LpkqTUlWoprK2vu4b9ce3bHLO9dFBeACJ7FaWZPJxLYf3rYr92/Y1uObogJwgRPceLWyxuNxa7PrJLE5cIIbr1bWaDSSrArBCW68JKtiJCsRkpUIyUqEZCVCshIhWYmQrERIViIkKxGSlQjJSkQ1su6+uGeD06GdnTe282a3c07fqUbW3vGB/Wh+thx9Oe6c03eqkfX5+9dWErDD2Gmx/+T9S/s1+t1eJBWFshPZkV581r/2gHGs2Of7T759mp7PYovnroMqZBEaOwohQAC8xj7HPJA4Lnt+OyXM+H6VHmPEMOY4Yz6f8u9hHosnXue6qUIWPzwGQ1DlKo79CL04FwgQ+c8+vLogIFLKWUa5KBZd07rYuCwPzUMA3hMMATEu5UU43lV+vu8Iqgx3Uc9BSqxey4qBleWrfpmseb0Iu83/5pXzu3ouyaVrZ/1lXtgc8zAWBbNqaIQdd21Xz2+fLgZ6L6sMIMJqp8drOY+ACIrAvMd7P9eD3H33dDrPe7444mcs6/mY6q0sfjBBd61yD4jwGMdbFeXHu3oxxP/Ve3tyeOF6eidLrIZkJUKyEiFZiZCsREhWIiQrEZKVCMlKhGQlQrISIVmJkKxESFYi5sq6+uCWHq1QEbjAyYws/n3/+eHrtolNsXlwgZOZRyvwYIymaWw4HNpgMBAVgAuczDy0hOIgFtl2YvPgIooyM/sDxxxePwza24AAAAAASUVORK5CYII=" InformativeScreenshot="3d7276f7b08911749aeae321e20ddb06.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Acessar ou Criar uma Conta | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Continuar'" sap:VirtualizedContainerService.HintSize="2042,165" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/groups/25065749" DesignTimeRectangle="1422, 281, 93, 28" ElementType="Text" FriendlyName="'Continuar'" FullSelectorArgument="&lt;webctrl aaname='Continuar' parentid='main' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Continuar' parentid='main' tag='A' type='' check:text='Continuar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAAgCAYAAAACAhZqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJiSURBVGhD7ZqxbhNBEIZ5lgjxAIEyBRId8Aw8BamQIKLKC1BHggqloQA6UlCkoEiVJomEUIrIiqUIIa4AbA/6TvynudU6JnY2Xksz0i/feuZ2b/5v127ulkUsPQJCBdFB2P3ywe5tPba1zY1QYeEzfitaCJPJxO6+eGS3n923Oy8fhAoLn/Eb3zsI4/G4JZS7IVRG+I3vHYTRaBQQblj4je8BYYkKCBUoIFSggFCBAkIFKgph8922/fzVtJMrdg8+ZmvnEXMNfgztyeun7fjk/FurtK52FYOAQYQ3/dXnN/Z79Mf2vx70audVCmFVVQSCTkBu1/MdOWoYYyBGKvxOBtpF890Oz47/Za0zXZAJzedPAqBPL856c3v46alhLebhU2M2jIJrn2NuRPh55lERCKnR0yQAaiIdywiNBVdmpieBOtVSQ2gj8OmN9LWI7wVB6+pePZfWUv66TnQRCDycN2eacrBSM3StvDdvFgSfE0AZ62tRbi0vP9+s2qtqqRBydZjFTxAN5pr15pWGoHsUKwUht8NzqhWCN5950vlyz7WIikBIG/byDeRg+by/Vt6bVwpCOi9aOQiIRgg1jXho/0dLQzQ2bZxr1pu3CATyjLUBuE9/3NT4nHpZOQiIh6QxHx4KkvEKmaj7L4MgY2Wez82CkK776Wi/+xnUOgrq3h/udevknmsRFYUQ+j8FhAoUECpQQKhAAaECBYQKFBAqUBbC+vOH8fLXDQmf8bsHgZeQdvbetgkIhcoKn/G79/IXr+M1TWPD4dAGg0GosPAZv3uvQRJ8ARmOSKis8FkAzMz+AuN2Gfw6MD7iAAAAAElFTkSuQmCC" InformativeScreenshot="6d3d1c8d78945db4228e3c5316cae963.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Grupos | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Reagendar entrevista'" sap:VirtualizedContainerService.HintSize="2042,165" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/continue_actions" DesignTimeRectangle="426, 493, 1118, 54" FriendlyName="'Reagendar entrevista'" FullSelectorArgument="&lt;webctrl parentid='utddaa-accordion-label' tag='H5' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='utddaa-accordion-label' tag='H5' type='' aaname='                          Reagendar entrevista           ' check:text='Reagendar entrevista' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABGIAAAA6CAYAAAD7of8WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAV5SURBVHhe7d29TWRJFAbQyYk0iAEyIAECwMfHxiYHLKROAYcAcJAwe/UBd3WntqBZaahm6HOku9Cvfl+19T49Zn89PT1tlVJKKaWUUkoppdTX16+7u7utUkoppZRSSimllPqa2mw224eHh9cgZvsmDQAAAAD8WQlgEsYIYgAAAAAWSO4iiAEAAABYQBADAAAAsIggBgAAAGARQQwAAADAIoIYAAAAgEUEMQAAAACLCGIAAAAAFhHEAAAAACwiiAEAAABYRBADAAAAsIggBgAAAGARQQwAAADAIoIYAAAAgEUEMQAAAACLCGIAAAAAFhHEAAAAACwiiAEAAABYRBADAAAAsIggBgAAAGCRLw9ibm5utkdHR/+p4+Pj7f39/Vuvv0v2fXJy8i32//z8vD0/P99uNpu3K3/W5eXlS+2S7/kz/QAAAOCQLQliZg/ouX56erp9fHx8u/L3OKQg5rMEMQAAALDb3oKYBDAJYnqAkL7vvTFTgUN/qyb9S/pmTK5n3qurq5f+GRe1Xo3te8o8FxcXv83f5470r7b07UFMXzvV956f6Z9K23thxUf3njG5n77/nNt4JpnjvfXSv/ql6tzzcwzEMsfZ2dnLtYyvOXK932edUd97nfmu7wsAAAAO0bcJYtKvByc9IKiH+j5P+ldgUXPVg34FBjXfuFbNV/3zM0FBDyd6GJJ1a64aW+211jh39a/2WmsmbdU/+r1H1u/7Sf/xbGr92XrjfOlTQdJ4NpGxddb5mRr7jZ/7mNpTfY6093sAAACAQ7S3ICbXKxxI5Q2M8SE949JvpocJCQN6kBEZW9dme8i4eusj7X18DxnGwCH62jN9vl19P3Pv+b3vv89ZoUftb1xvbC/9TPr8Y/9qm51DNzvjbtwXAAAAHKIlQUz/85SqCmEiD+d5W2LWr8KIkof9aqs3LGYhQK5VGNLH9Ko99L7RQ4dZgDALT2pMzV3zzcZ3ub7r3rP/fn99zjE4Gdcb99Wr5szYOouMq4Aq+trZzzi2zL6DyLUa440YAAAADt3yN2LyIJ4H8goZYgwPZuqBfhZwzEKAXOtBzNje9b5R4cVngpgedNQ99flm47td7THuv4/5bBBT7TO9z3iWs7NLvwpX+j2P4977vgAAAOBQLQ9ioh7kKxzYFRb04KP0B/uM60FKZM261oORmbG972e2t11r9/l635ld9x65l36Gfc6skbVq/LhetWdPH8n8+Qd++1wxrt31+8zv1W/X9wUAAACHai9BTORa/1OV9EsgkYf4+CgMqc81vj5X2JBraauQYGyP/N5DhPo9xvV6eyq/19rpk74ZE/n8f98Eyfx9jnH9MQzpc9Z+qu9svbT1s64x/Txq371f1NrjnsY58rP2OPatz+PcAAAAcGj2FsTUg3wPINIvYUBVPchHBQUVFuRzxlYQkAf8XE97rud/99zX7e2pCkoic/TPY5AQfW/X19e/hR29LfPc3t7+GzqkPvMmyEf3nrbxXvqc2X/GpM9761Wfqjq3UvfczyH62v07SI17yj3X97nr+wIAAIBD9OVBzL7kgb8HBQAAAAD79iOCmHrbot6smb3RAgAAALBvP+aNmLz90v9sRggDAAAAfDc/JogBAAAA+O4EMQAAAACLCGIAAAAAFhHEAAAAACwiiAEAAABYRBADAAAAsIggBgAAAGARQQwAAADAIoIYAAAAgEUEMQAAAACLCGIAAAAAFhHEAAAAACwiiAEAAABYRBADAAAAsIggBgAAAGARQQwAAADAIoIYAAAAgEUEMQAAAACLCGIAAAAAFhHEAAAAACyQAGaz2bwGMQlglFJKKaWUUkoppdTXVEKYh4eH1yAm/1FKKaWUUkoppZRSX11P238AlLawFNrk9KEAAAAASUVORK5CYII=" InformativeScreenshot="122dbe54fb608caeb8f4a92cfa3d8ad6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Reagendar entrevista'" sap:VirtualizedContainerService.HintSize="2042,165" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/continue_actions" DesignTimeRectangle="595, 623, 166, 28" ElementType="Text" FriendlyName="'Reagendar entrevista'" FullSelectorArgument="&lt;webctrl parentid='utddaa-accordion' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='utddaa-accordion' tag='A' type='' aaname='Reagendar entrevista' check:text='Reagendar entrevista' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKoAAAAgCAYAAACCXeM8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQhSURBVHhe7Zy9alRRFIV9FhEfQC0tBDv1GXwKUwkqVnkBwU7QStJYqIVFCgsLi1SpFEQUwuBAEHEKNcmR7+KSlZ0z92ZGZ+7cZG9YzNyz/9dZM8GAOVPS0gZgKdS0QdhfoW68fVEu3btRzq5dTiR6BTpEj26NUA8ODsrFu9fLudtXyvn7VxOJXoEO0SO6lDVC3d/fb5RcS0ok+gB6RJeyRqh7e3sp1MRKAT2iS1kKNbGSSKEmBoEUamIQSKEmBoEUamIQWJhQN7ZeNgVrhq+Ws+pYe7Zevv+YrMz8bz5slfdfPlZ9/wpqj76Ny83Ht6p+AU52J1/Lg9dPqv7/hYUKtbYo5z/3fi18sUXgNAn1uDixQuWZc0jWmQQgi+Tz7OZ+1ZNtfd5uaom46PeZiIHk7Z13f7yH/YA5ZfhcqLE25nsxJ/PwwZz24WzbnVqfdncO9VD9OBez1PpNq4/PeQIuOuo7F+TJyCM21hYvHov5TvOid6Fq2Xj58rOk1yEOc1LkV64uKdZSvIgjhlg9axbF86pLUa56q7ZyFe+CxOf5EV2786p+PPPq9fF7/9ivrX6NG+I4w8d57T1x/kwP/0ZlBo+lpu8wL5YuVM7byAb4WL52wU5+JAl4/doMngOo5fnMAsgh1y/Se+vMEeupVowTunaPAon9Y37sN2t9YjlTrnwxzuF8Rp/8bZwdFwsVas1cpAByasZyLKk4yHKjvpOuOM4klpgj0wweq3xddo1giTeS7jv4fqrlsQ7Pc9PuUSBxJvxeP/brqu/78+yC897qi8X7i3lC7b7cPyuW9o2qZZ1IEMmN0MIiV3WoDzldQp32TRBjdaZ5vI98UajEYeoR63Xt1uWP88eZ8Ht+rNdVX/tQJ95XjTvFY8yh+4gCj/7I4zxYmlABy/CJZBmd1QgRRIwv6YtHkgDn+tTzXoTJ7yAGv+frctXbZ+3qHet1CaVt95rf+8vv9WO/rvpAMfyjjffxvJY7jQdxpvlirNeYFUsVKoAATINrkRpJ668eNq/yiQjP52LUR34JVc9+eeTRj75RWKqneI+VT73jBeh5lh/9bbszu7/3ePXE7/Vjv676PDMrM2uvWlzMcV5AFKr66TnWngdLFyqATL9QJwvzvOh7vr3Z+HUhTgbGr2cgDgLx67JkIli1edYcIF42pMv4NRbxIp1XGTPqAnVRsVYNbbtHgWgX9Veudqr1a6sPxJ9q6Nx7K0ZGvcgZRk7sF+9rXixMqH0BolyoiZOBQQs1fsOA2rdKYvgY/Deq//jFUqQnE4MXauJ0IIWaGARSqIlBIIWaGASmCvXCnWv5BygSKwF0iB6PCJX/6P9o82njRMmJRJ9Ah+jxyB+g4E+nTCaTMh6Py2g0SiR6BTpEj0f+pA/GIQrm6zaR6BPo0EVaSim/AVcAjd4032ePAAAAAElFTkSuQmCC" InformativeScreenshot="fe22033f158d1ea0b22691bd575543ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'SELECT  appointments_co...'" sap:VirtualizedContainerService.HintSize="2042,158" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Sao Paulo">
+              <ucas:SelectMenuItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String></x:String>
+                  <x:String>Brasilia</x:String>
+                  <x:String>Porto Alegre</x:String>
+                  <x:String>Recife</x:String>
+                  <x:String>Rio de Janeiro</x:String>
+                  <x:String>Sao Paulo</x:String>
+                </scg:List>
+              </ucas:SelectMenuItem.Items>
+              <ucas:SelectMenuItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6f618588-4102-4d7a-955e-d15cbeb7984b" InformativeScreenshot="6d419c26f9132bb01266fa4990e525e4" Selector="&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ucas:SelectMenuItem.Target>
+            </ucas:SelectMenuItem>
+            <uix:NSelectItem DisplayName="Select Item 'Local do CASV*'" sap:VirtualizedContainerService.HintSize="2042,165" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Sao Paulo ASC Unidade Vila Mariana">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="6">
+                  <x:String></x:String>
+                  <x:String>Brasilia ASC</x:String>
+                  <x:String>Porto Alegre Document Service Center (DSC)</x:String>
+                  <x:String>Recife Document Service Center (DSC)</x:String>
+                  <x:String>Rio de Janeiro ASC</x:String>
+                  <x:String>Sao Paulo ASC Unidade Vila Mariana</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="506, 774, 448, 42" ElementType="DropDown" FriendlyName="'Rio de Janeiro ASC'" FullSelectorArgument="&lt;webctrl id='appointments_asc_appointment_facility_id' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='appointments_asc_appointment_facility_id' tag='SELECT' type='' aaname='Local do CASV*' /&gt;" InformativeScreenshot="b103a2903e1d44db80e1194cb6c70ee3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="506, 754, 448, 15" ElementType="Text" FriendlyName="'Local do CASV*'" FullSelectorArgument="&lt;webctrl parentid='appointments_asc_appointment_facility_id_input' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='appointments_asc_appointment_facility_id_input' tag='LABEL' type='' aaname='Local do CASV' check:text='Local do CASV*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcQAAAATCAYAAAAOE308AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMcSURBVHhe7du9apRBFMZxL8V7COgtiLkAQZJSvACFtLmApN7WOnUKi4BVSguLBfELQliLJAjK9uM+C89yMjnzvqPJbrP/4kfy7pyZObvFPMxGH83n8wIAwLYjEAEAWCAQAQBYIBABAFhYBeL5+XnZ398vs9nsTtEmaF/trz6y8czJyUk5ODgoNzc36Xgv772zs7OitbNa7aU9VdPqNVvv+Ph4Na7fhz5rrRvX//XxU/n67GX5fXF5pxYA8DC2PhC1Rh1u7iWGmE2n07K3t7eU7a3x3d3dW+s5RF2f1UTaV7VXX76Vz0+fl8vDo/Lj1dtlKH5/8br8ubpO5wEA/t9WB+JQMLXGvOfZ2dlyXHXZeBaUClH9rAMy1vlz0Dp+7efkXZk+frK8KcZaAMDD+adA9EHurwGzet+4LB7s2iOOxfGeQIxrq3YymdwKlZ7+Iq2XhVJLDKv4e6zR89i+ovfZCtQ4X1+T6mY4O5pwOwSANeoORAfA0N/CdJjHQ14/fcuKNyTPj/VevxWIdYDoWaHnQOvpr6bxWD+m7kH914HqPhzKqvFY5Lo47kCPPV2//1Au3hwug1Bfm3JLBID16A7EbNyHusZ8mLcCIBNDMq5V17XWVnA4kMb6i/NM8/+l3zpA1bcDP9aJ1nUoWl2nmthz/DxiHQBg/boDUYd3fRsSh8pY+JjrHBI9N8TWWOxprL/4WhyLATck68FBPbaG58bbpdSB2noPAID1u1cgOhA0NhRo4sNfIeiA0ms9N8TWWOxprL84z7I5UQxT/XSI14Y+N/N7qHtxKI99fgCA9drYV6ZZ+Ghezw2xtbaCxGuO9Rfn9YzH25v3z26CrlNvXi/7DFrvwX2fnp7e6R8AsDkP/o9q4nMMgXrMQdITiKLXXetn3c4ciD39ZdSX1on71mtpz9bf9vwe3Ue2nug568XzNSf2DgDYrFuBqEM548M9Ht6SHfAOBNOzx3Tg+3XfvrSGahxCdZBEsUfV3ve/XZjD2fOk7jvuU1NfMayz9Ybma684HwCweatABABgmxGIAAAsEIgAACwQiAAAzOflL5tJCRljPwi2AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Data do agendamento*'" sap:VirtualizedContainerService.HintSize="2042,3419" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1610,3194" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Data do agendamento*'" sap:VirtualizedContainerService.HintSize="1570,165" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="506, 856, 448, 42" ElementType="InputBox" FriendlyName="'INPUT appointments_asc_…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Data do agendamento*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcQAAAAuCAYAAAC292lPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFISURBVHhe7dUxbsMwEETR3P9oBngKFm5sw4UMF4TAzLpIpSQ99R7wq91+vrZtm5IknT2DKElS+hnE3vtsrc3L5SJJ0tLV3tXuHQ5iHa/X67zdbvN+v0uStGS1c7V3tXuHg1iL+Xw+5+v1mu/3W5KkJaudq72r3ft1EOtpjDH3fZckaclq52rv/hzEWs56BoBV1c7V3hlEAE7NIAJAGEQACIMIAGEQASAMIgCEQQSAMIgAEAYRAMIgAkAYRAAIgwgAYRABIAwiAIRBBIAwiAAQBhEAwiACQBhEAAiDCABhEAEgDCIAhEEEgDCIABAGEQDCIAJAGEQACIMIAGEQASAMIgCEQQSAMIgAEAYRAMIgAkAYRACIfwextTYfj8ccY3yeJUlasdq52rvavcNB7L1/jrWYkiStXO1d7d7hIEqSdOYMoiRJ2za/AT1NqE5SJjwiAAAAAElFTkSuQmCC" InformativeScreenshot="0f1adcbddd3b97ab49c03447be425b68.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="506, 836, 448, 15" ElementType="Text" FriendlyName="'Data do agendamento*'" FullSelectorArgument="&lt;webctrl parentid='appointments_asc_appointment_date_input' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='appointments_asc_appointment_date_input' tag='LABEL' type='' aaname='Data do agendamento' check:text='Data do agendamento*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcQAAAATCAYAAAAOE308AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQQSURBVHhe7Zu9bhNRFIR5FN4hEi+RB6CJS0SREqS0KDWu3VKnTkERiSolBYXTgURhCmJRIPdLxmKi8eTc9TopWJspPnn3nt+7G53xTZRnq9WqCyGEEP53IoghhBDCHRHEEEII4Y4IYgghhHDHvSBeX193R0dHD5hMJt1isXgQuA3E3NzclLbHMp1O11S2febi4qI7OzvrlstlaR8LeJ+7/iz8mH3ovr95V9pCCGFMbAhiJX4Y1sfHx918Pt9Y7wM5kAs5K/tjiSD+O1o/Hy1uP37q5s9fdIv3s+7bq7fra4hj5RtCCGNgqyACiNAuAzuCuBuHKIjg98/b7uvL12twXfmEEMJYGCSIOB2enJzcnxIxuDHAq1+tUgy5TgFDfvUHEAKt4yCWvqh3fn6+IYjex7aB3dc3fdCT2maz2QOx0r789AwboY/Hb6uBfMhLH6D7xjWehe4FOTXO++p7Vnxnl5eX60/NCbu/O37R8T61R4BTIsQQJ8ScDkMIY2eQIHJgchBy4Luda+6PwamCCjBsfWgrsGs/FBGvoX3gWmMc2NXfc6Bf7Qn3qEmxoqhoDo+BTUWDNVRc+mrQn/HqwzWv4Tno4znZA9DnSzvvmdP7dHu1T302+NshRPHX5y9rUcwpMYQwZh4liBUYhByGQ/wxaF0kSRXvYlT1O6Suw76ZX0WDdgoLej09Pd2oSR/2pf5uH1JD14nvy/2rfaMGfbDu+bUXxmtfnhOfuOfeuSf6Vz4hhLBPPEkQMUBxSiAckC1/rtO/dUJsiaUOYR347qODvaLqu2+PKiwap7Av7ZFwbUgNrlGwtAbjvEaVV3P6fhXYqnhfwyfusc7eEEt/xuALQ/VOQwhh7Az+G6KejDCMMUzVX4c01nSYIh7ixwHMtdYJsWXTGjrwaW8NatLXt/dMtA6uW8+IaI++NqQGfdAn83ic16jyak74+rNSqnhfwyfusd56zn3vNIQQxs4gQdQBXA1PDsiWjw5nxsDWOiEOqVH1W8X12TRna8jDxt77eibwZ4++NrSG7wv1UJe9e41qb/rMce05lSre17wv76HyCSGEfWKrIGKYqghwUOpQx2DUE40Pfh/IHPB94uIxuK9OTTqUcV3tAQzpG89Ae8I97BQW7ov3VV7k0p58bVsNtzM/fGDzfOpDO0A/zEm7xvAdIKaK9zX46+kP69pTVSOEEPaJDUHEgHMw5DDsNIjDlD4Ygi0B41CGD/05iOGvAuUwB/M89d8udumb+fxfIrwm0D0gp/ZYremzrmpoD+Dq6mptZw7PRzGiODGH5qSP5nUx03hf031zv9XzZHwIIewb94IYajD8M+hDCOHwiSD+hScgFT+egPTkFEII4TCJIAp9v1YMIYRw2EQQQwghhNWq+wNHVqEGmpbVuwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:RepeatNumberOfTimesX DisplayName="Repeat Number Of Times" sap:VirtualizedContainerService.HintSize="1570,2870" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_2" NumberOfTimes="10" StartAt="1">
+                    <ui:RepeatNumberOfTimesX.Body>
+                      <ActivityAction x:TypeArguments="x:Int32">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
+                        </ActivityAction.Argument>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1558,2710" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '23'" sap:VirtualizedContainerService.HintSize="1516,2618" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="1">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="1084,2393" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ClickType="Single" DisplayName="Click '23'" sap:VirtualizedContainerService.HintSize="1044,165" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="688, 559, 31, 28" ElementType="Text" FriendlyName="'23'" FullSelectorArgument="&lt;webctrl aaname='23' parentid='ui-datepicker-div' tag='A' /&gt;" FuzzyAccuracy="0.4" FuzzySelectorArgument="&lt;webctrl aaname='22' parentid='ui-datepicker-div' tag='A' type='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAgCAYAAACYTcH3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVFhH7ZRPSwJBGMb7RJ3rXN+hPkC3wGO3OkfUrVNEp6g8RBFe7CB0MDp5iZSISunfapaYpUG7vM2764gzPCsbLrxL7MAPHZ/HmZ8zixOUoJFMmeJNUxQehkzj0xMhlQkjlQkjlQnjf8kcXtzRZGZnwPTSLp1V6kaH5/z5qA4zlgwvuLCZp+rbtz8vP3dodiVrbGZ3tBj3uK/XYsY+GZuNk5L/6/kV5UhYE7tMZrswUkbLcs/OYpUJu4Lh5yrseWGgzH3L/TP5S4em1EYMv0cdZvUoOJm59RxdOT0ji0VGi6ANbDjnHpKGMlUVROW0L7K4VYC5Tbkvw6ezV7w1MihTa/1EolRr08xy1l+84nRhZ19tOJzzXF+T/R0o89B2I7F2HNw/gjPdOzgPBDTzSuS60TPWYqDMowokgDJPH64IUOal44kAZRz1ByQBlKmrQAIo8/rliQBlmiqQAMq8dz0RoIwkPAYySRgJkiH6BSyTbUmC3fCfAAAAAElFTkSuQmCC" InformativeScreenshot="416611f0b86f3c892b385adb69222ba8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector" />
+                                  </uix:NClick.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NClick>
+                                <uix:NClick ClickType="Single" DisplayName="Click '12:1512:3012:45'" sap:VirtualizedContainerService.HintSize="1044,165" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="506, 738, 448, 42" ElementType="DropDown" FriendlyName="'12:1512:3012:45'" FullSelectorArgument="&lt;webctrl id='appointments_asc_appointment_time' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='appointments_asc_appointment_time' tag='SELECT' type='' aaname='Horário do agendamento * ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcQAAAAuCAYAAAC292lPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVHhe7do/TttwGMdhn64nYOwBuAzHoBIrR0BVxcyCmJBCFIUkwrEZ6Pbr72vJSK1MVbrFfoYnkf/NH72v3fR9X47HY2nbthwOh7Lf7we73a48Pz8DwCyka2Pj0rt0L/1LB6PJwcvLy3Djdrstm82mrNfr8vT0VFar1fAPAKds7Fn6ls6ld+le+jdGsUkhc/L66qGcn92Wr1++A8CspXfpXvqXDnZdV5qMjSllLt7fvZa3twIAs5bepXvpXzqYKbHJLjXjY4o59RAAzFG6l/6lg5kSm4yL2akKIgBLku6lf+O7xCGIedEoiAAsSbqX/o3vEZt8ipqvbwQRgCVJ99K/dPA9iCZEAJZmnBDTwWFlKogALJEgAkAliABQCSIAVIIIAJUgAkAliABQCSIAVIIIAJUgAkAliADMVtu+TZ6fIogAnKzHx025uLj4UK5PPTdFEAE4aTc3PyZjmPNT939EEAE4eZeX336LYY6n7vsbQQTg5P25Ov3MqnQkiADMwrg6/eyqdCSIAMzG/6xKR4IIwGx03c/J8/9CEAGgEkQAqAQRACpBBIBKEAGgEkQAqAQRACpBBIBKEAGgEkQAqAQRAKrJIK5WK0EEYFHSvfQvHWzbtjS73c6ECMDijBNiOvgexPV6LYgALEq6l/6lg8PKdL/fl81mI4gALEq6l/6lg8OEeDgcyna7Lednt+X+7nXyIQCYk/Qu3Uv/0sHj8ViaVDHj4vXVw3AxxQSAOUvv0r3x/WHXdaVJFbM7zcmUMuNjdqp50Zivb/IPAKds7Fn6ls6ld+O7w3Sw7/vS5CcHKWTGxuxSIzfmU1QAmIN0bWxcepfujTHs+778AvPv5i8bTD/gAAAAAElFTkSuQmCC" InformativeScreenshot="54debde8194d7e4f5b36e846c7582519.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1044,147" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(down)][u(hk)][d(hk)][k(enter)][u(hk)]" />
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Reagendar'" sap:VirtualizedContainerService.HintSize="1044,165" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="1323, 893, 121, 42" ElementType="Button" FriendlyName="'Reagendar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Reagendar' check:text='Reagendar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH0AAAAuCAYAAAAFmhZ8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALzSURBVHhe7Zy/ahRRFId9FhF7tU0hpFLfwacwVUBDqryAha2xE8RCQioLBcuttlJYshGCrBDc3UnhH7jyrfmNZ653dwOa3XHOOfCxO/ece+/s+WYmpJkrVVWlwBch3SG19GdvX6RbO/fS1a2NoGPgFb8N6dPpNN18dDdd276dru9uBh0Dr/jFcy19MpnMrojShKAb4BfPtfTxeBzSOw5+8RzSHRHSHRLSHRLSHRLSHRLSHRLSHRLSHRLSHRLSHRLSHRLSHbJ26e8GvVSKbz++p8dv9otz2g7nXX09a+35t0L6h9FRcZzGbb3c+yPXdkL6EuZJRzaNe947qMfsUyF/Etx/+iB9mnw+z/4K6pWnljkE6/ZP3s/qmUde+ynsObHO8elJY327NlCvoNZKt3sT9tz5pB6IUi/+Nf+NdOqsJMbJUyfhuSg1V2tJlCRovXwvrad6Pgnl+bTi2Fdraa7y2itfW/XKa69V0FrpjEsqnJ59qZssmDevWdQyn08ariYrb0WVzoF57Mne5O18e5HkF4zmam+NWex6y2ovg1ZILwWNoKHU0BDuhlLk0pGn0N1Wkmobb+fY0DnYWuZa0SVp5POLVHMU7qVbIfz4/HF3kcZIXKmZF5Ge5y1/I93K1m+y65XmXzatkw40k9Aj0zbZ1gnbZI3ZZjLPSgP21FguNWeR9NK5Lds7pBekA2N6PKuO5tBkjhc1Xsear2PWIM8YOTU+z2s/5e33fO+8FviuvamhljnUckyonhry+p2roLXS1TzbMOpsqOmgZhI0XM2WSIkmGOdfNruvzRNW8jLpYM+t97HfEGlzrPOq/7q+KMDWroK1S18X8y42D7iQrrteT4zSneoJN3f6oj8N3nAjPfhNSHdISHdISHdISHdISHdISHdISHdISHdISHdISHdIUfqNh3filWIdBa/4bUjnVVNPDvdnCa6IoFvgFb+NV4rxUrnRaJSGw2EaDAZBx8ArfhsvD5R4rgQeAUG3wKuEV1WVfgJXKlLOG3Bb0AAAAABJRU5ErkJggg==" InformativeScreenshot="c7eec39eb7c0e855764e8b09296353fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Confirmar'" sap:VirtualizedContainerService.HintSize="1044,1472" sap2010:WorkflowViewState.IdRef="NCheckState_3">
+                                  <uix:NCheckState.IfExists>
+                                    <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="506,1247" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'Você tem'" FileName="screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="466,240" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2">
+                                        <uix:NTakeScreenshot.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="8, 79, 1920, 961" FriendlyName="'Você tem'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div' idx='6' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div' type='' tag='DIV' aaname='' check:text='Você tem certeza de que deseja remarcar o agendamento?&amp;#xA;  &amp;#xA;  &amp;#xA;    Cancelar&amp;#xA;  Confirmar' /&gt;" InformativeScreenshot="70d3eeb8d06615cbdde06a529612e7a2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector" />
+                                        </uix:NTakeScreenshot.Target>
+                                      </uix:NTakeScreenshot>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Confirmar'" sap:VirtualizedContainerService.HintSize="466,165" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="959, 468, 113, 42" ElementType="Text" FriendlyName="'Confirmar'" FullSelectorArgument="&lt;webctrl aaname='Confirmar' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Confirmar' tag='A' type='' check:text='Confirmar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAuCAYAAAAWTVaIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJVSURBVHhe7ZxBTgIxFIYNd9AYPYF6O47gFVy6YIeHMBEXuHdnZE9CQgwhhLAZeM7faYd2phCi6NA3/0u+BDrtvPK+dphVz4ShLihVYZRSx70neb24k+fOJUkMeIM/F0bqZrPJL9zKW+dK3jvXJDHgDf7gsZS6Xq+N8dgAkgbwB4+l1CzLKDVx4A8eKVURlKoQSlUIpSqEUhVCqQqhVIVQqkIoVSGUqhBKVQilKuREpN7LYmbmUEY2uI/0+yn+/UeyHMxFZkMZR/umT/NSu0NB+lBiX1aYzEffa/sFJsdIvmLXFNKw1GIHRXelETGXRde1VXazL9xKW2AHunA7sTeyDUUg19jbqficDYbFIspj1buWrw/063v5inmg3UUw50oOPA3KBYS55bkWbuyxFuoempVaE7cLK7QsSOW7uY9/vdjpZeGtdFfoqlQnrRjr5G3bnMzyfkaivZ/57I+vPGXs3KIL949oVqpfnH3E+vkLIrI4jIigsHukul1tCcaCWn6IC/P51HPv7vsXJCE1VvigsP8hNegTkWpyeNFaqQf+4JOW6snE/3FtfOuk7ntRMoWzhTqFx+8OqWa83zen5VJzzI+uii2Ebgt5yItSg1K9a+Y7otVSDVaiF/Xda0W68IveoNTYvAqxNl97pZJjQqkKoVSFUKpCKFUhlKoQSlUIpSqEUhVCqQqhVIVQqkIoVSGUqpCo1MH5DY/cSRR4g79AKo5q+Xx4lJf8AoyTtIA3+AuO3MGhSsvlUqbTqUwmE5IY8AZ/weFYCDTANLYwSQt4c0JFRL4BLNUwLlCZVwYAAAAASUVORK5CYII=" InformativeScreenshot="3187b697e894faecd683cdbf94c808fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <umab:OutlookApplicationCard Account="{x:Null}" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="466,643" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+                                        <umab:OutlookApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="454,455" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="[string.Format(&quot;Nova seleção de agenda realizada com sucessso!{0}{1}Verifique!&quot;, Environment.NewLine, Environment.NewLine)]" BodyType="Text" Cc="juliane-maria@hotmail.com" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="412,363" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="*** AGENDAMENTO CASV REALIADO COM SUCESSO ***" To="fcgalesso@gmail.com" UseDocumentAsBody="False">
+                                                <umab:SendMailX.Files>
+                                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                                </umab:SendMailX.Files>
+                                                <umab:SendMailX.HtmlBodyFromFile>
+                                                  <umabh:HtmlContentArgument FilePath="{x:Null}">
+                                                    <umabh:HtmlContentArgument.RuntimeImages>
+                                                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                    </umabh:HtmlContentArgument.RuntimeImages>
+                                                    <umabh:HtmlContentArgument.ValueMappings>
+                                                      <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                    </umabh:HtmlContentArgument.ValueMappings>
+                                                  </umabh:HtmlContentArgument>
+                                                </umab:SendMailX.HtmlBodyFromFile>
+                                              </umab:SendMailX>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </umab:OutlookApplicationCard.Body>
+                                      </umab:OutlookApplicationCard>
+                                    </Sequence>
+                                  </uix:NCheckState.IfExists>
+                                  <uix:NCheckState.IfNotExists>
+                                    <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="506,1042" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'Para completar'" FileName="screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="466,240" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3">
+                                        <uix:NTakeScreenshot.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="360, 274, 1200, 776" FriendlyName="'Para completar'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div' idx='3' parentid='main' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div' type='' parentid='main' tag='DIV' aaname='  ' check:text='Para completar o seu processo de Solicitação de Visto, você deve agendar uma data para' /&gt;" InformativeScreenshot="34dd94abca9e9d7372596b39e7aea084.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector" />
+                                        </uix:NTakeScreenshot.Target>
+                                      </uix:NTakeScreenshot>
+                                      <umab:OutlookApplicationCard Account="{x:Null}" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="466,643" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
+                                        <umab:OutlookApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="454,455" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="Horários não disponíveis!" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="412,363" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Erro ao tentar reagendar CASV" To="fcgalesso@gmail.com" UseDocumentAsBody="False">
+                                                <umab:SendMailX.Files>
+                                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                                </umab:SendMailX.Files>
+                                                <umab:SendMailX.HtmlBodyFromFile>
+                                                  <umabh:HtmlContentArgument FilePath="{x:Null}">
+                                                    <umabh:HtmlContentArgument.RuntimeImages>
+                                                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                    </umabh:HtmlContentArgument.RuntimeImages>
+                                                    <umabh:HtmlContentArgument.ValueMappings>
+                                                      <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                    </umabh:HtmlContentArgument.ValueMappings>
+                                                  </umabh:HtmlContentArgument>
+                                                </umab:SendMailX.HtmlBodyFromFile>
+                                              </umab:SendMailX>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </umab:OutlookApplicationCard.Body>
+                                      </umab:OutlookApplicationCard>
+                                    </Sequence>
+                                  </uix:NCheckState.IfNotExists>
+                                  <uix:NCheckState.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="959, 468, 113, 42" ElementType="Text" FriendlyName="'Confirmar'" FullSelectorArgument="&lt;webctrl aaname='Confirmar' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Confirmar' tag='A' type='' check:text='Confirmar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAuCAYAAAAWTVaIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJVSURBVHhe7ZxBTgIxFIYNd9AYPYF6O47gFVy6YIeHMBEXuHdnZE9CQgwhhLAZeM7faYd2phCi6NA3/0u+BDrtvPK+dphVz4ShLihVYZRSx70neb24k+fOJUkMeIM/F0bqZrPJL9zKW+dK3jvXJDHgDf7gsZS6Xq+N8dgAkgbwB4+l1CzLKDVx4A8eKVURlKoQSlUIpSqEUhVCqQqhVIVQqkIoVSGUqhBKVQilKuREpN7LYmbmUEY2uI/0+yn+/UeyHMxFZkMZR/umT/NSu0NB+lBiX1aYzEffa/sFJsdIvmLXFNKw1GIHRXelETGXRde1VXazL9xKW2AHunA7sTeyDUUg19jbqficDYbFIspj1buWrw/063v5inmg3UUw50oOPA3KBYS55bkWbuyxFuoempVaE7cLK7QsSOW7uY9/vdjpZeGtdFfoqlQnrRjr5G3bnMzyfkaivZ/57I+vPGXs3KIL949oVqpfnH3E+vkLIrI4jIigsHukul1tCcaCWn6IC/P51HPv7vsXJCE1VvigsP8hNegTkWpyeNFaqQf+4JOW6snE/3FtfOuk7ntRMoWzhTqFx+8OqWa83zen5VJzzI+uii2Ebgt5yItSg1K9a+Y7otVSDVaiF/Xda0W68IveoNTYvAqxNl97pZJjQqkKoVSFUKpCKFUhlKoQSlUIpSqEUhVCqQqhVIVQqkIoVSGUqpCo1MH5DY/cSRR4g79AKo5q+Xx4lJf8AoyTtIA3+AuO3MGhSsvlUqbTqUwmE5IY8AZ/weFYCDTANLYwSQt4c0JFRL4BLNUwLlCZVwYAAAAASUVORK5CYII=" InformativeScreenshot="463da3e2a894af1762fdfd16849fbcb8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector" />
+                                  </uix:NCheckState.Target>
+                                </uix:NCheckState>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="400,564" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTakeScreenshot DisplayName="Take Screenshot 'Para completar'" FileName="screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="360,240" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1">
+                                  <uix:NTakeScreenshot.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="360, 74, 1200, 776" FriendlyName="'Para completar'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div' idx='3' parentid='main' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div' type='' parentid='main' tag='DIV' aaname='  ' check:text='Para completar o seu processo de Solicitação de Visto, você deve agendar uma data para' /&gt;" InformativeScreenshot="0c10aa9abff47f7beb4132355522dd6f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector" />
+                                  </uix:NTakeScreenshot.Target>
+                                </uix:NTakeScreenshot>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="360,165" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="987, 613, 16, 16" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl aaname='Next' parentid='ui-datepicker-div' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Next' parentid='ui-datepicker-div' tag='SPAN' type='' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADLSURBVDhP7Yy9CkFhGMffiyIfl4A6MRyKyCCuQEQWddKZDAaGk0lZWJRBLsXsCuyP/qdOXs/zJOotBsNv+X/8TL7SIpf8hQ/a/SktNge6XG9PIEOnfYAqHIZLIeJgo31Nrtwkm84gUAUa2PK/EK62R3FEzjOALf8LoXZ8p0v4SKj1dge+K3zVJQhhtDupJ54BbPlfCHvjUD1rYMv/Qggm80gV2GCjfU3Gq5NGdzSj9f4sRMjQ8X3Wa8SYdLFKTijVYkyq4JNLfl3o0x1hlrfudjaqZgAAAABJRU5ErkJggg==" InformativeScreenshot="e958eb49270b11c706ff2af44a5d6491.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                  </uix:NClick.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NClick>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="688, 559, 31, 28" ElementType="Text" FriendlyName="'23'" FullSelectorArgument="&lt;webctrl aaname='23' parentid='ui-datepicker-div' tag='A' /&gt;" FuzzyAccuracy="0.4" FuzzySelectorArgument="&lt;webctrl aaname='22' parentid='ui-datepicker-div' tag='A' type='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAgCAYAAACYTcH3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVFhH7ZRPSwJBGMb7RJ3rXN+hPkC3wGO3OkfUrVNEp6g8RBFe7CB0MDp5iZSISunfapaYpUG7vM2764gzPCsbLrxL7MAPHZ/HmZ8zixOUoJFMmeJNUxQehkzj0xMhlQkjlQkjlQnjf8kcXtzRZGZnwPTSLp1V6kaH5/z5qA4zlgwvuLCZp+rbtz8vP3dodiVrbGZ3tBj3uK/XYsY+GZuNk5L/6/kV5UhYE7tMZrswUkbLcs/OYpUJu4Lh5yrseWGgzH3L/TP5S4em1EYMv0cdZvUoOJm59RxdOT0ji0VGi6ANbDjnHpKGMlUVROW0L7K4VYC5Tbkvw6ezV7w1MihTa/1EolRr08xy1l+84nRhZ19tOJzzXF+T/R0o89B2I7F2HNw/gjPdOzgPBDTzSuS60TPWYqDMowokgDJPH64IUOal44kAZRz1ByQBlKmrQAIo8/rliQBlmiqQAMq8dz0RoIwkPAYySRgJkiH6BSyTbUmC3fCfAAAAAElFTkSuQmCC" InformativeScreenshot="c767c3477f7de6ce03cf3416fda2b3c4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RepeatNumberOfTimesX.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:RepeatNumberOfTimesX>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,109" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://ais.usvisa-info.com/pt-br/niv/schedule/32973057/appointment" DesignTimeRectangle="506, 709, 448, 42" ElementType="InputBox" FriendlyName="'INPUT appointments_asc_…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Data do agendamento*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcQAAAAuCAYAAAC292lPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFISURBVHhe7dUxbsMwEETR3P9oBngKFm5sw4UMF4TAzLpIpSQ99R7wq91+vrZtm5IknT2DKElS+hnE3vtsrc3L5SJJ0tLV3tXuHQ5iHa/X67zdbvN+v0uStGS1c7V3tXuHg1iL+Xw+5+v1mu/3W5KkJaudq72r3ft1EOtpjDH3fZckaclq52rv/hzEWs56BoBV1c7V3hlEAE7NIAJAGEQACIMIAGEQASAMIgCEQQSAMIgAEAYRAMIgAkAYRAAIgwgAYRABIAwiAIRBBIAwiAAQBhEAwiACQBhEAAiDCABhEAEgDCIAhEEEgDCIABAGEQDCIAJAGEQACIMIAGEQASAMIgCEQQSAMIgAEAYRAMIgAkAYRACIfwextTYfj8ccY3yeJUlasdq52rvavcNB7L1/jrWYkiStXO1d7d7hIEqSdOYMoiRJ2za/AT1NqE5SJjwiAAAAAElFTkSuQmCC" InformativeScreenshot="69fbf22c1319c2e3a59d440307a8a8a8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Agendar Entrevistas | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="506, 689, 448, 15" ElementType="Text" FriendlyName="'Data do agendamento*'" FullSelectorArgument="&lt;webctrl parentid='appointments_asc_appointment_date_input' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='appointments_asc_appointment_date_input' tag='LABEL' type='' aaname='Data do agendamento' check:text='Data do agendamento*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcQAAAATCAYAAAAOE308AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQQSURBVHhe7Zu9bhNRFIR5FN4hEi+RB6CJS0SREqS0KDWu3VKnTkERiSolBYXTgURhCmJRIPdLxmKi8eTc9TopWJspPnn3nt+7G53xTZRnq9WqCyGEEP53IoghhBDCHRHEEEII4Y4IYgghhHDHvSBeX193R0dHD5hMJt1isXgQuA3E3NzclLbHMp1O11S2febi4qI7OzvrlstlaR8LeJ+7/iz8mH3ovr95V9pCCGFMbAhiJX4Y1sfHx918Pt9Y7wM5kAs5K/tjiSD+O1o/Hy1uP37q5s9fdIv3s+7bq7fra4hj5RtCCGNgqyACiNAuAzuCuBuHKIjg98/b7uvL12twXfmEEMJYGCSIOB2enJzcnxIxuDHAq1+tUgy5TgFDfvUHEAKt4yCWvqh3fn6+IYjex7aB3dc3fdCT2maz2QOx0r789AwboY/Hb6uBfMhLH6D7xjWehe4FOTXO++p7Vnxnl5eX60/NCbu/O37R8T61R4BTIsQQJ8ScDkMIY2eQIHJgchBy4Luda+6PwamCCjBsfWgrsGs/FBGvoX3gWmMc2NXfc6Bf7Qn3qEmxoqhoDo+BTUWDNVRc+mrQn/HqwzWv4Tno4znZA9DnSzvvmdP7dHu1T302+NshRPHX5y9rUcwpMYQwZh4liBUYhByGQ/wxaF0kSRXvYlT1O6Suw76ZX0WDdgoLej09Pd2oSR/2pf5uH1JD14nvy/2rfaMGfbDu+bUXxmtfnhOfuOfeuSf6Vz4hhLBPPEkQMUBxSiAckC1/rtO/dUJsiaUOYR347qODvaLqu2+PKiwap7Av7ZFwbUgNrlGwtAbjvEaVV3P6fhXYqnhfwyfusc7eEEt/xuALQ/VOQwhh7Az+G6KejDCMMUzVX4c01nSYIh7ixwHMtdYJsWXTGjrwaW8NatLXt/dMtA6uW8+IaI++NqQGfdAn83ic16jyak74+rNSqnhfwyfusd56zn3vNIQQxs4gQdQBXA1PDsiWjw5nxsDWOiEOqVH1W8X12TRna8jDxt77eibwZ4++NrSG7wv1UJe9e41qb/rMce05lSre17wv76HyCSGEfWKrIGKYqghwUOpQx2DUE40Pfh/IHPB94uIxuK9OTTqUcV3tAQzpG89Ae8I97BQW7ov3VV7k0p58bVsNtzM/fGDzfOpDO0A/zEm7xvAdIKaK9zX46+kP69pTVSOEEPaJDUHEgHMw5DDsNIjDlD4Ygi0B41CGD/05iOGvAuUwB/M89d8udumb+fxfIrwm0D0gp/ZYremzrmpoD+Dq6mptZw7PRzGiODGH5qSP5nUx03hf031zv9XzZHwIIewb94IYajD8M+hDCOHwiSD+hScgFT+egPTkFEII4TCJIAp9v1YMIYRw2EQQQwghhNWq+wNHVqEGmpbVuwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXpSURBVFhH1ZZvVFNlHMdvvvJlKoiYpmm9qHd1ynMGg93BgE02/rPJAJkYZacXmXVK046cOscwQ8FMqyVjgJZGLTXziHlESZDBIFOTjbGNbTQHnQyGHhPw1/PcPZc9u2xi9qZ+53zOHZd7n8/3+T33uRvzvymorJzjLJCzriLVXpda2ebSZNpdGlXAoVYGXIWKfvS/C4hap0oqwdeS2/59OXXsXHdJzrsubdbwQG4aTJMjC5KdwmHPkoJdFcRZkOFHobbie8kwD1euYpUWzdg7kJ8BHHnpQWaESA0LYFeyCAk48tI8zmxWQ4Z78AKAR1wludUO9WpwFCgQ8lAAYReQfEYXSAB7ZjJCgu5L24nHJMPfv/CFA0U5Jk5eiOWKoDxaB2YLsDqIIzvt6wcK8YtavrsPDc7JSYCwDtABsJwKESYXBOhXiMGZK6simshVv0GVfwndeDVXBrb89HB51CWgZh9xCUIBMI5McSHRhddyg25uVk3Z0Gm5GLrRANez0MBIGDXA9MzJAyiU0x1QJAUDyBNhQCVxR9wdTx15ZdvKQy/BpleV0KZIhstoQCvqhFBsRzi3bwbvsWYY7rUEblg7A15z82178xs3r9eIblg/Fvms+0Q++75E3+CBhCGPXuT16kUef53YM2JMdP/RkOAeMYq3E22wKqFyzpNfbhhecagCVu0vg0ZFAnSi1NdQF+xYTujXqcF37gyMjo6C1T0GpyxB8Gd8bsTWAl6TEoaaE8BnSoSb34vh1plkuHMuGSbPI9oQF5Ng6qLUD8hJ9Kj9hyskTzRVAI9ucy6cTE8EC9pCfXgp8MzXqeGm1wP93lF4sykAqo/Gp1HuGodNDQGweUbhz989MN6WD/faU2CqIwXuXUoBMKcCdKGjBR050OduVkz0DLPyq5drljWuh+VNL3I8bVgPNXkS+DFDBJdVLNjQevtbz0I/EqhrQ2I6QCYir2acCzHmPYsk6QA9mDSCLAgf4OeMaqJnmBWHKy7gADSqHRo4LhNBW4YYbNvf4lqMZ55VHS7HYszqD4O8jjqBr71zbYsgAAmB5Zhe2TmiZ5jHG8v7hQEw28rT4bRsFbiPf8OtMy3Gs+ZnTgdQ7ByHPnTt+OC34fLp9pMO9KRaiZ5hljWtD0QKkFhbDCbZC+Azd3AP22xyPsDJrjEYG2oPD0C3nwuQEiB61AEUAHUBaJY2rOOo2JQJQ53tcKp77L5iHnnEAIL155COET3DLG0qt/HCJeTI84y+DK6cCC7BbDPH4AB9g2gJXKbwANNiQk9KaAmWNpafx2IaOtD7De9xDxbearSUFvPyjUbyEP66lZo1PXOMFP2PDT2EqAN7HjPqICr1ZVMdzis+vMXy9oQH4ENgec5utA3do3DdYRmGngxBgLD2w5SF3UX0DBNfX5YslC42lnHwn587uhEGR37j9jneavSs+ZljufOGF4bMpZPRxEFY9B6QhV5E+FW82KjzxyMRDx+APvfskdfghK2DazHeavhhw+A1x+eOXf0Jak9UoJmjdZ8h5wOwMNUteBXjijfq3sGSRfVrOWgxfz6uvhRQt6C0pRqMV85Aq7OXo+FyC5SYqmDJXg3cNsuRRCjm5XwA9m2iDRX+Oo43rvXwAbAMI/ybZyEh1lACCw9oIXbvGjD9kE2te6QASN7FusGpi/xjNba+RC0U0YRJyTHGUAwxn2jg+c80MNmjEEhDYp7JLraA6CLXorq1VbyIBstoMc8CvRZi9mugt1WJBMJ1D7UdM2GW7iCa6IV/OMbVaY/SEhpuxoQFdQh9EWgb0devRfiy4eXBAHfN0iP/6JdxnKH0g9i6cCENJ0fM/1QD/na69bRYCve60cy7pTseWE7XfIO2MPag1s3LOGGddpp5B4ug6lguEvFtp+Vo1p0S96xrPlvh3bHgi+ItMXqtH0vpEHF6DdzqUkyEi6Uw0Snx/3WJ3Rz1aX+Ywi+refo1STEGbXXMwaLWRz/XWL9ryfbc7WQDaH2td81sK2p19YQlNWnGS+a/WwzzN8pWpGcXa7w4AAAAAElFTkSuQmCC" InformativeScreenshot="0f5c65286a45042565b12024fd1cf8cb.png" Selector="&lt;html app='chrome.exe' title='Acessar ou Criar uma Conta | Official U.S. Department of State Visa Appointment Service | Brazil | Portuguese'/&gt;" Url="https://ais.usvisa-info.com/pt-br/niv/users/sign_in" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </ueab:SequenceX>
+</Activity>
